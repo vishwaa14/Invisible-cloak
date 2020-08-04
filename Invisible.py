@@ -3,8 +3,6 @@ import numpy as np
 import time
 
 print("""
-
-
         PREPARE TO GET INVISIBLE!!!....
     """)
 
@@ -34,9 +32,6 @@ while(cap.isOpened()):
 	upper_green = np.array([102,255,255])
 	mask1 = cv2.inRange(hsv,lower_green,upper_green)
 	
-	
-	
-	# Addition of the two masks to generate the final mask.
 	
 	mask1 = cv2.morphologyEx(mask1, cv2.MORPH_OPEN, np.ones((5,5),np.uint8))
 	
